@@ -18,30 +18,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7O2-33-SHs">
-                                <rect key="frame" x="182" y="323" width="11" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7O2-33-SHs">
+                                <rect key="frame" x="187.5" y="333.5" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fk1-cF-1xh">
-                                <rect key="frame" x="164" y="352" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fk1-cF-1xh">
+                                <rect key="frame" x="155.5" y="341.5" width="64" height="30"/>
+                                <state key="normal" title="Calculate"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NwV-Xu-KY3"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TIp Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h6P-tY-8wK">
+                                <rect key="frame" x="112.5" y="295.5" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="4xx-9q-7ao"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ml-b2-Izj">
+                                <rect key="frame" x="112.5" y="246.5" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="0We-tk-QnV"/>
+                                    <constraint firstAttribute="width" constant="150" id="69P-Y7-KVM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyP-S6-dbD">
+                                <rect key="frame" x="112.5" y="124" width="150" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="cJL-LC-VmO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="h6P-tY-8wK" firstAttribute="top" secondItem="9Ml-b2-Izj" secondAttribute="bottom" constant="19" id="9Fr-3h-cqq"/>
                             <constraint firstItem="7O2-33-SHs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="A5p-u8-H23"/>
+                            <constraint firstItem="h6P-tY-8wK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C6z-bg-gA1"/>
+                            <constraint firstItem="fk1-cF-1xh" firstAttribute="top" secondItem="7O2-33-SHs" secondAttribute="bottom" constant="8" id="R0f-hl-ngK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NyP-S6-dbD" secondAttribute="bottom" constant="522" id="auV-Uq-dBM"/>
+                            <constraint firstItem="NyP-S6-dbD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h1k-tm-TSZ"/>
+                            <constraint firstItem="fk1-cF-1xh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="itK-NV-lbi"/>
+                            <constraint firstItem="9Ml-b2-Izj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mqP-6g-StL"/>
                             <constraint firstItem="7O2-33-SHs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q4E-oH-ibc"/>
+                            <constraint firstItem="7O2-33-SHs" firstAttribute="top" secondItem="h6P-tY-8wK" secondAttribute="bottom" constant="8" id="sHH-Sq-ACk"/>
+                            <constraint firstItem="h6P-tY-8wK" firstAttribute="top" secondItem="9Ml-b2-Izj" secondAttribute="bottom" constant="19" id="y3m-UK-4pv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="label" destination="7O2-33-SHs" id="0cJ-Z0-fGV"/>
+                        <outlet property="tipPercentage" destination="h6P-tY-8wK" id="vFB-1y-yC4"/>
+                        <outlet property="total" destination="9Ml-b2-Izj" id="Rhr-hL-NHD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
